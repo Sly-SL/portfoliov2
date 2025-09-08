@@ -8,16 +8,20 @@ const Buttons:{label:string,linkClassName:string,buttons:
             href:string,
         }[]
 }[]=[
-    {label:"Swift - Desktop", linkClassName:"text-3xl", buttons:[
+    {label:"TS", linkClassName:"text-3xl", buttons:[
+            {name: "Astral", href:shortcuts.projects + shortcutsProjects.Astral + shortcutsVersions.Web},
+            {name: "TodoList", href: shortcuts.projects + shortcutsProjects.Todo + shortcutsVersions.Web},
+            {name: "PastPages", href: shortcuts.projects + shortcutsProjects.PastPages + shortcutsVersions.Web},
+        ]},
+    {label:"Swift - Desktop", linkClassName:"text-2xl", buttons:[
             {name:"Mid (MacOs Dynamic Island)", href:shortcuts.projects + shortcutsProjects.Mid + shortcutsVersions.Desktop},
             {name: "TodoList", href:shortcuts.projects + shortcutsProjects.Todo + shortcutsVersions.Desktop},
             {name: "Astral", href: shortcuts.projects + shortcutsProjects.Astral + shortcutsVersions.Desktop},
         ]},
-    {label:"TS", linkClassName:"text-xl", buttons:[
-            {name: "Astral", href:shortcuts.projects + shortcutsProjects.Astral + shortcutsVersions.Web},
-            {name: "TodoList", href: shortcuts.projects + shortcutsProjects.Todo + shortcutsVersions.Web},
-            {name: "PastPages", href: shortcuts.projects + shortcutsProjects.PastPages + shortcutsVersions.Web},
-        ]}
+    {label:"Swift - Mobile", linkClassName:"text-xl", buttons:[
+            {name: "Astral", href: shortcuts.projects + shortcutsProjects.Astral + shortcutsVersions.Mobile},
+            {name: "TodoList", href: shortcuts.projects + shortcutsProjects.Todo + shortcutsVersions.Mobile},
+        ]},
 ]
 
 const ProjectsSubdiv = () => {
