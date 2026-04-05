@@ -32,7 +32,7 @@ const ToggleProject = () => {
                 <div className="relative z-10">
                     <div className="flex gap-2 w-full">
                         <button className={`flex group w-full flex-col items-center px-4 sm:px-6 py-5 rounded-xl transition-all duration-400 ${
-                            value === "projects" ? "bg-gradient-to-br from-purple-400/20 to-blue-500/20 shadow-md text-white" : "text-gray-400"
+                            value === "projects" ? "bg-gradient-to-br from-purple-400/20 to-blue-500/20 shadow-md dark:text-white text-black" : "text-gray-400"
                         }`}
                                 onClick={() => handleChange("projects")}>
                             <Code className="mb-2 w-5 h-5 group-hover:rotate-[20deg] transition-transform duration-300" />
@@ -40,7 +40,7 @@ const ToggleProject = () => {
                         </button>
 
                         <button className={`flex w-full group flex-col items-center px-4 sm:px-6 m-1 py-4 rounded-xl transition-all duration-400 ${
-                            value === "documents" ? "bg-gradient-to-br from-purple-400/20 to-blue-500/20 shadow-md text-white" : "text-gray-400"
+                            value === "documents" ? "bg-gradient-to-br from-purple-400/20 to-blue-500/20 shadow-md dark:text-white text-black" : "text-gray-400"
                         }`}
                                 onClick={() => handleChange("documents")}
 
@@ -50,7 +50,7 @@ const ToggleProject = () => {
                         </button>
 
                         <button className={`flex group flex-col w-full items-center px-4 sm:px-6 py-4 rounded-xl transition-all duration-400 ${
-                            value === "tech" ? "bg-gradient-to-br from-purple-400/20 to-blue-500/20 shadow-md text-white" : "text-gray-400"
+                            value === "tech" ? "bg-gradient-to-br from-purple-400/20 to-blue-500/20 shadow-md dark:text-white text-black" : "text-gray-400"
                         }`}
                                 onClick={() => handleChange("tech")}>
                             <Boxes className="mb-2 w-5 h-5 group-hover:rotate-[20deg] transition-transform duration-300" />

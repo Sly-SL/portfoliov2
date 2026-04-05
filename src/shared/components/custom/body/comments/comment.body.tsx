@@ -28,7 +28,7 @@ export const CommentBody = ({ name,comment,created_at,image }:CommentBodyProps) 
 
     return (
     <div
-        className="px-4 pt-4 pb-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group hover:shadow-lg hover:-translate-y-0.5"
+        className="px-4 pt-4 pb-2 rounded-xl dark:bg-white/5 bg-black/5 border border-white/10 hover:bg-white/10 transition-all group hover:shadow-lg hover:-translate-y-0.5"
 
     >
         <div className="flex items-start gap-3 ">
@@ -48,12 +48,12 @@ export const CommentBody = ({ name,comment,created_at,image }:CommentBodyProps) 
             )}
             <div className="flex-grow min-w-0">
                 <div className="flex items-center justify-between gap-4 mb-2">
-                    <h4 className="font-medium text-white truncate">{name}</h4>
+                    <h4 className="font-medium text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white truncate">{name}</h4>
                     <span className="text-xs text-gray-400 whitespace-nowrap">
     {formatDate(created_at)}
 </span>
                 </div>
-                <p className="text-gray-300 text-sm break-words leading-relaxed relative bottom-2">{comment}</p>
+                <p className="text-black/90 group-hover:text-black dark:text-white/70  dark:group-hover:text-white text-sm break-words leading-relaxed relative bottom-2">{comment}</p>
             </div>
         </div>
     </div>

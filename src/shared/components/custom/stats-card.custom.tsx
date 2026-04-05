@@ -22,17 +22,17 @@ export const StatCard = ({ icon: Icon, color, value, label, description }: StatC
                         <Icon className="w-6 h-6 text-white" />
                     </div>
                     <span
-                        className="text-xl font-bold text-white"
+                        className="text-xl font-bold text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white"
                     >
                         {value}
                     </span>
                 </div>
 
                 <div>
-                    <p className="text-xs font-bold uppercase text-gray-300 mb-1">{label}</p>
+                    <p className="text-xs font-bold uppercase text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white mb-1">{label}</p>
                     <div className="flex items-center justify-between">
-                        <p className="text-xs text-gray-400">{description}</p>
-                        <ArrowUpRight className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
+                        <p className="text-xs text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white">{description}</p>
+                        <ArrowUpRight className="w-4 h-4 text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white transition-colors" />
                     </div>
                 </div>
             </div>

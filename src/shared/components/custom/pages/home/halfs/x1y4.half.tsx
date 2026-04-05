@@ -19,7 +19,7 @@ const X1Y4Half = () => {
             Portfolio
           </span>
                     </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
+                    <p className="dark:text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
                         Tutaj możesz zobaczyć moje projekty, certyfikaty i technologie, których używałem w moich projektach. Każdy projekt bardzo pomógł mi w rozwoju
                     </p>
                 </article>

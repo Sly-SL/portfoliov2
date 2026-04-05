@@ -27,7 +27,7 @@ const X2Y5Half = () => {
                         <div className="p-2 rounded-xl bg-indigo-500/20">
                             <MessageCircle className="w-6 h-6 text-indigo-400" />
                         </div>
-                        <h3 className="text-xl font-semibold text-white">
+                        <h3 className="text-xl font-semibold text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white">
                             Komentarze <span className="text-indigo-400">({comments.length})</span>
                         </h3>
                     </div>

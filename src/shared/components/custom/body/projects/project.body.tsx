@@ -31,11 +31,11 @@ const ProjectBody:FC<CardProjectProps> = ({ Img, Title, Description, Link: Proje
                     </div>
 
                     <div className="mt-4 space-y-3">
-                        <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+                        <h3 className="text-xl font-semibold bg-gradient-to-r dark:from-blue-200 dark:via-purple-200 dark:to-pink-200 from-blue-700 via-purple-700 to-pink-700 bg-clip-text text-transparent">
                             {Title}
                         </h3>
 
-                        <p className="text-gray-300/80 text-sm leading-relaxed line-clamp-2">
+                        <p className="dark:text-gray-300/80 text-gray-700/70 text-sm leading-relaxed line-clamp-2">
                             {Description}
                         </p>
 
@@ -59,7 +59,9 @@ const ProjectBody:FC<CardProjectProps> = ({ Img, Title, Description, Link: Proje
                             {id ? (
                                 <Link
                                     href={`/projects/${id}`}
-                                    className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50"
+                                    className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg dark:bg-white/5 dark:hover:bg-white/10 dark:text-white/90
+                                    bg-black/20 hover:bg-black/30
+                                     transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50"
                                 >
                                     <span className="text-sm font-medium">Szczególy</span>
                                     <ArrowRight className="w-4 h-4" />

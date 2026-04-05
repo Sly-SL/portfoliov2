@@ -97,7 +97,7 @@ export const CommentForm = memo(function CommentForm() {
                 duration={700}
                 activeClass={"animate-fade-in-down"}
                 className="space-y-2">
-                <label className="block text-sm font-medium text-white">
+                <label className="block text-sm font-medium text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white">
                     Imię <span className="text-blue-400">*</span>
                 </label>
 
@@ -106,7 +106,7 @@ export const CommentForm = memo(function CommentForm() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Wpisz imię"
-                    className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+                    className="w-full p-3 rounded-xl bg-white/5 border dark:border-white/10 border-black/80 text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
                     required
                 />
             </AnimateSsr>
@@ -116,7 +116,7 @@ export const CommentForm = memo(function CommentForm() {
                 duration={700}
                 activeClass={"animate-fade-in-down"}
                 className="space-y-2">
-                <label className="block text-sm font-medium text-white">
+                <label className="block text-sm font-medium text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white">
                     Wiadomość <span className="text-blue-400">*</span>
                 </label>
 
@@ -125,7 +125,7 @@ export const CommentForm = memo(function CommentForm() {
                     value={comment}
                     onChange={handleTextareaChange}
                     placeholder="Napisz wiadomość..."
-                    className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-orange-500/20 transition-all resize-none min-h-[120px]"
+                    className="w-full p-4 rounded-xl bg-white/5 border dark:border-white/10 border-black/80 text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white  placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-orange-500/20 transition-all resize-none min-h-[120px]"
                     required
                 />
             </AnimateSsr>
@@ -135,7 +135,7 @@ export const CommentForm = memo(function CommentForm() {
                 duration={700}
                 activeClass={"animate-fade-in-left"}
                 className="space-y-2">
-                <label className="block text-sm font-medium text-white">
+                <label className="block text-sm font-medium text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white">
                     Zdjęcie profilowe <span className="text-gray-400">(optional)</span>
                 </label>
 
@@ -182,7 +182,7 @@ export const CommentForm = memo(function CommentForm() {
                                 Wybierz zdjęcie profilowe
                             </button>
 
-                            <p className="text-center text-gray-400 text-sm mt-2">
+                            <p className="text-center text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white text-sm mt-2">
                                 Maksymalny rozmiar: 5MB
                             </p>
                         </div>

@@ -15,7 +15,7 @@ const SocialLinksCustom = () => {
                 <AnimateSsr
                     activeClass={"animate-fade-in-right"}
                     duration={700}>
-                    <h3 className="text-xl font-semibold text-white/90 mb-6 flex items-center gap-3 tracking-tight">
+                    <h3 className="text-xl font-semibold text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white mb-6 flex items-center gap-3 tracking-tight">
                         <span className="inline-block w-8 h-[2px] bg-indigo-500/80 rounded-full"></span>
                         Moje media
                     </h3>
@@ -59,11 +59,11 @@ const SocialLinksCustom = () => {
                                     {/* Text Container */}
                                     <div className="flex flex-col">
                         <span
-                            className="text-lg font-bold pt-[0.2rem] text-gray-200 tracking-tight leading-none group-hover:text-white transition-colors duration-300">
+                            className="text-lg font-bold pt-[0.2rem]  tracking-tight leading-none text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white transition-colors duration-300">
                         {primaryLink.displayName}
                             </span>
                                         <span
-                                            className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                                            className="text-sm text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white transition-colors duration-300">
                         {primaryLink.subText}
                          </span>
                                     </div>
@@ -99,7 +99,7 @@ const SocialLinksCustom = () => {
                                     href={link.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group relative flex items-center gap-3 p-4.5 rounded-xl bg-white/[0.03] border border-white/10 overflow-hidden hover:border-white/20 hover:bg-white/[0.05] transition-all duration-500"
+                                    className="group relative flex items-center gap-3 p-4.5 rounded-xl bg-white/10 border border-white/10 overflow-hidden hover:border-white/20 hover:bg-white/[0.05] transition-all duration-500"
                                 >
                                     <div className={`absolute inset-0 opacity-0 group-hover:opacity-15 transition-opacity duration-500
                              bg-gradient-to-r ${link.gradient}`}/>
@@ -119,11 +119,11 @@ const SocialLinksCustom = () => {
                                     {/* Text Container */}
                                     <div className="flex flex-col min-w-0">
                     <span
-                        className="text-sm font-bold text-gray-200 group-hover:text-white transition-colors duration-300">
+                        className="text-sm font-bold text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white transition-colors duration-300">
                   {link.displayName}
                     </span>
                                         <span
-                                            className="text-xs text-gray-400 truncate group-hover:text-gray-300 transition-colors duration-300">
+                                            className="text-xs truncate text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white transition-colors duration-300">
                     {link.subText}
                     </span>
                                     </div>

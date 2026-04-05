@@ -47,7 +47,7 @@ const TypingText = () => {
 
     return (
         <div className="h-8 flex items-center">
-            <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light">
+            <span className="text-xl md:text-2xl text-black/90 group-hover:text-black dark:text-white/90  dark:group-hover:text-white bg-clip-text font-light">
                 {text}
             </span>
             <span className="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] mr-1 animate-blink"></span>

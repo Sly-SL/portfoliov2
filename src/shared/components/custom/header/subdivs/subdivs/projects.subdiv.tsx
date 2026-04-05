@@ -11,7 +11,7 @@ const ProjectsSubdiv = async () => {
             <div className={"grid grid-cols-3 items-start justify-center gap-18"}>
                 {projects.map((item, i) => (
                     <AnimateSsr activeClass={i % 4 == 1 ? "animate-fade-in-right" : i % 4 == 2 ?  "animate-fade-in-down": i % 4 == 3 ? "animate-fade-in-up" : "animate-fade-in-left"} key={i}>
-                        <Link className={" text-white/90 text-3xl hover:text-white hover:scale-105 duration-500 font-medium"} href={shortcuts.projects + "/" + item.id} key={i}>
+                        <Link className={"text-black/90 hover:text-black dark:text-white/90  dark:hover:text-white text-3xl hover:scale-105 duration-500 font-medium"} href={shortcuts.projects + "/" + item.id} key={i}>
                             {item.name}
                         </Link>
                     </AnimateSsr>

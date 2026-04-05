@@ -30,7 +30,7 @@ const MediaSubdiv = () => {
 
                         {item.buttons.map((button, i) => ((
                             <AnimateSsr activeClass={i % 4 == 1 ? "animate-fade-in-right" : i % 4 == 2 ?  "animate-fade-in-down": i % 4 == 3 ? "animate-fade-in-up" : "animate-fade-in-left"} key={i}>
-                                <Link className={item.linkClassName+" text-white/90 hover:text-white font-medium hover:scale-105 duration-500"} href={button.href} >
+                                <Link className={item.linkClassName+" text-black/90 hover:text-black dark:text-white/90  dark:hover:text-whitefont-medium hover:scale-105 duration-500"} href={button.href} >
                                     {button.name}
                                 </Link>
                             </AnimateSsr>
