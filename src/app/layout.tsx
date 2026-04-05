@@ -10,8 +10,60 @@ import {Montserrat} from "next/font/google";
 export const revalidate = 86400
 
 export const metadata: Metadata = {
-  title: "Slysl",
-    description: "Portfolio of an Upper-Middle TypeScript/Rust Developer with strong Swift skills, showcasing projects, certificates, and professional experience in modern web and mobile development.",
+  metadataBase: new URL("https://slysl.vercel.app"),
+
+  title: {
+    default: "Slysl — TypeScript & Rust Developer",
+    template: "%s | Slysl",
+  },
+
+  description:
+      "Portfolio of an Upper-Middle TypeScript & Rust Developer with strong Swift skills. Building scalable web and mobile applications with modern technologies.",
+
+  keywords: [
+    "TypeScript Developer",
+    "Rust Developer",
+    "Next.js Portfolio",
+    "Fullstack Developer",
+    "Swift Developer",
+    "Web Development",
+    "Frontend Developer",
+    "Backend Developer",
+  ],
+
+  authors: [{ name: "Slysl" }],
+  creator: "Slysl",
+
+  openGraph: {
+    type: "website",
+    locale: "pl_PL",
+    url: "https://slysl.vercel.app/",
+    title: "Slysl — TypeScript & Rust Developer",
+    description:
+        "Explore projects, experience, and skills in modern web and mobile development.",
+    siteName: "Slysl Portfolio",
+    images: [
+      {
+        url: "/assets/render-full.webp", // положи в /public
+        width: 1200,
+        height: 630,
+        alt: "Slysl Portfolio Preview",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Slysl — TypeScript & Rust Developer",
+    description:
+        "Portfolio showcasing modern web, mobile, and scalable applications.",
+    images: ["/assets/render-full.webp"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const montserrat = Montserrat({
