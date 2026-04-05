@@ -76,7 +76,7 @@ const OrderConsultationForm = () => {
                             exit={{ scale: 0.8, opacity: 0 }}
                             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
                         >
-                            <form action="https://formsubmit.co/el/luhuxu"
+                            <form action="https://formsubmit.co/slyslcoder@gmail.com"
                                   method="POST"
                                   id={"request-consultation-modal"}
                                   className="w-full max-w-full flex flex-col gap-4">

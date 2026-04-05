@@ -73,7 +73,7 @@ const ContactForm = () => {
                     <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" />
                 </div>
             <form
-                action="https://formsubmit.co/el/luhuxu"
+                action="https://formsubmit.co/slyslcoder@gmail.com"
                 method="POST"
                 onSubmit={handleSubmit}
                 className="space-y-6"
