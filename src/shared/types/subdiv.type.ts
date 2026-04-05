@@ -1,5 +1,5 @@
 import type {ReactNode} from "react";
-import {allSubdivs} from "@/shared/enums/subdivs.enums";
+import {allSubdivs} from "@/shared/consts/enums/subdivs.enums";
 
 export type SubdivType = {
     id:AllSubdivsType;
