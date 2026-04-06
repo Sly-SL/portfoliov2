@@ -2,7 +2,8 @@ export const parseBoolean = (value?: string): boolean =>
     value?.toLowerCase() === "true";
 
 export const CONSTANTS = {
-    FRONTEND_DOMEN: process.env.FRONTEND_DOMEN ?? "http://localhost:3000",
+    FRONTEND_DOMEN: process.env.NEXT_PUBLIC_FRONTEND_DOMEN ?? "localhost:3000",
+    FRONTEND_URL: process.env.NEXT_PUBLIC_FRONTEND_URL ?? "localhost:3000",
     IS_BETA: parseBoolean(process.env.NEXT_PUBLIC_IS_BETA) ?? true,
     FIREBASE:{
         apiKey: process.env.FIREBASE_API_KEY,

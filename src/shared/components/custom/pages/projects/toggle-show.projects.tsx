@@ -1,7 +1,7 @@
+'use client'
+
 import type {AllSectionsProjectsType} from "@/shared/types/all-sections-projects.type";
 import type {FC} from "react";
-
-export const dynamic = "force-static"
 
 interface ToggleButtonProps {
     showMore: boolean;

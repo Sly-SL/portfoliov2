@@ -8,6 +8,7 @@ export const shortcuts = {
     "contact":"/contact",
     "privacy":"/privacy",
     "terms":"/terms",
+    "documents":"/documents",
     "pnf": "/not-found",
     "reviews":"/reviews",
     "login":"/login",
@@ -20,14 +21,3 @@ export const shortcutsSlysl = {
     "instagram":"/instagram",
     "cv":""
 } as const;
-
-export const shortcutsProjects = {
-    "Mid": "/Mid",
-    "Ecokominki": "/Ecokominki",
-    "Jewulski": "/Jewulski",
-    "Agrotex" : "/Agrotex",
-    "Astral": "/Astral",
-    "Todo" : "/Todo",
-    "PastPages": "/PastPages",
-    "PortfolioV1": "/v1Portfolio",
-}as const;

@@ -37,7 +37,7 @@ export const AddWorkForm = () => {
             const next = operation === "+" ? prev + 1 : prev - 1;
 
             if (operation === "-" && next < 0) {
-                router.push(shortcuts.admin + shortcuts.login);
+                router.push(shortcuts.admin);
                 return prev;
             }
 

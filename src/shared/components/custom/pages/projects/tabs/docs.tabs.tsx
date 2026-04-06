@@ -50,7 +50,7 @@ const DocsTabs = async () => {
                 ))}
             </div>
 
-            {/* Show more full grid */}
+            {/* Show full grid */}
             <div
                 id="documents-show-more"
                 className="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5"
@@ -74,7 +74,6 @@ const DocsTabs = async () => {
                 ))}
             </div>
 
-            {/* Toggle buttons */}
             <div className="md:hidden block">
                 {documents.length > 4 && (
                     <div className="mt-6 w-full flex justify-start">

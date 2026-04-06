@@ -1,1 +1,1 @@
-export type AllCollectionsType = "comments" | "projects" | "users" | "sessions"
+export type AllCollectionsType = "comments" | "projects" | "users" | "sessions" | "documents"
