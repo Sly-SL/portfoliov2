@@ -77,7 +77,7 @@ const DocsTabs = async () => {
             <div className="md:hidden block">
                 {documents.length > 4 && (
                     <div className="mt-6 w-full flex justify-start">
-                        <ToggleButtonProjects showMore type="documents" />
+                        <ToggleButtonProjects type="documents" />
                     </div>
                 )}
             </div>
@@ -85,7 +85,7 @@ const DocsTabs = async () => {
             <div className="hidden md:block">
                 {documents.length > 6 && (
                     <div className="mt-6 w-full flex justify-start">
-                        <ToggleButtonProjects showMore type="documents" />
+                        <ToggleButtonProjects type="documents" />
                     </div>
                 )}
             </div>

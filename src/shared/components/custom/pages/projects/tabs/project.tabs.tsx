@@ -68,7 +68,6 @@ const ProjectTabs = async () => {
                 {projects.length > 4 && (
                     <div className="mt-6 w-full flex justify-start">
                         <ToggleButtonProjects
-                            showMore={true}
                             type={"projects"}
                         />
                     </div>
@@ -79,7 +78,6 @@ const ProjectTabs = async () => {
                     <div className="mt-6 w-full flex justify-start">
                         <ToggleButtonProjects
                             type={'projects'}
-                            showMore={true}
                         />
                     </div>
                 )}
