@@ -31,7 +31,7 @@ const X2Y2Half = () => {
                         </AnimateSsr>
 
                         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-                            <a href="https://drive.google.com/drive/folders/1OOln-2lKdBpamJqrj5KUe150TlTC9NBX" className="w-full lg:w-auto">
+                            <a href="https://drive.google.com/drive/folders/1OOln-2lKdBpamJqrj5KUe150TlTC9NBX" title={"CV Download"} className="w-full lg:w-auto">
                                 <AnimateSsr
                                     activeClass={"animate-fade-in-up"}
                                     duration={800}
@@ -43,7 +43,7 @@ const X2Y2Half = () => {
                                     </button>
                                 </AnimateSsr>
                             </a>
-                            <a href="#showcase" className="w-full lg:w-auto">
+                            <a href="#showcase" title={"showcase"} className="w-full lg:w-auto">
                                 <AnimateSsr activeClass={"animate-fade-in-up"}>
                                     <button
                                         className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
