@@ -2,6 +2,7 @@ import type {ReactNode} from "react";
 import type {Metadata} from "next";
 import "./globals.css";
 import Header from "@/shared/components/header";
+import Head from 'next/head';
 import {Toaster} from "@/shared/components/libs/basic/sonner/root.sonner";
 import Cookie from "@/shared/components/libs/basic/cookie.component"
 import Footer from "@/shared/components/footer";
@@ -16,6 +17,9 @@ export const metadata: Metadata = {
   title: {
     default: "Slysl — TypeScript & Rust Developer",
     template: "%s | Slysl",
+  },
+  verification:{
+    google:"Zqou63Uo6Hcg1k0Slp25AshdFqCTsaFY82fVJeCr0_c",
   },
 
   description:
@@ -81,6 +85,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
+      <Head>
+        <meta name="google-site-verification" content="Zqou63Uo6Hcg1k0Slp25AshdFqCTsaFY82fVJeCr0_c" />
+      </Head>
       <body
         className={`antialiased max-w-screen ${montserrat.variable}`}
       >
