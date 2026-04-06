@@ -18,6 +18,8 @@ import {getProjectByIdQuery} from "@/lib/firebase/queries/get-project-by-id.quer
 import type {ProjectType} from "@/shared/types/project.type";
 import GithubButton from "@/shared/components/custom/github-button.custom";
 import AnimateSsr from "@/shared/components/custom/ssr/animate.ssr";
+import {CONSTANTS} from "@/shared/consts/consts.consts";
+import {Metadata} from "next";
 
 const TECH_ICONS = {
     React: Globe,
@@ -97,6 +99,50 @@ interface Props {
     params: Promise<{id:string}>
 }
 
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+    const { id } = await params;
+    const project = await getProjectByIdQuery({ id });
+
+    if (!project) {
+        return {
+            title: "Projekt nie znaleziony",
+            description: "Nie znaleziono projektu w naszej bazie.",
+        };
+    }
+
+    const title = project.name;
+    const description = project.description ?? "Amazing Product on Antique Shop";
+    const imageUrl = project.image ?? "/default-og-image.png";
+    const url = `${CONSTANTS.FRONTEND_URL}/projects/${id}`;
+
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+            url,
+            siteName: "Slysl",
+            images: [
+                {
+                    url: imageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [imageUrl],
+        },
+        metadataBase: new URL(CONSTANTS.FRONTEND_URL),
+    };
+};
+
 const ProjectDetails = async ({params}:Props) => {
     const { id } = await params;
     const project = await getProjectByIdQuery({id})
@@ -121,7 +167,7 @@ const ProjectDetails = async ({params}:Props) => {
                     <div className="absolute top-0 -right-4 w-72 md:w-96 h-72 md:h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" />
                     <div className="absolute -bottom-8 left-20 w-72 md:w-96 h-72 md:h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000" />
                 </div>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.02]" />
+                <div className="absolute inset-0 opacity-[0.02]" />
             </div>
 
             <div className="relative">
@@ -215,7 +261,7 @@ const ProjectDetails = async ({params}:Props) => {
                             <div className="bg-white/[0.02] backdrop-blur-xl rounded-2xl p-8 border border-white/10 space-y-6 hover:border-white/20 transition-colors duration-300 group">
                                 <h3 className="text-xl font-semibold text-white/90 flex items-center gap-3">
                                     <Star className="w-5 h-5 text-yellow-400 group-hover:rotate-[20deg] transition-transform duration-300" />
-                                    Key Features
+                                    Główne różnice
                                 </h3>
                                 {project.features.length > 0 ? (
                                     <ul className="list-none space-y-2">
