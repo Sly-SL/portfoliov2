@@ -95,6 +95,17 @@ const OrderConsultationForm = () => {
 
                                         let digits = target.value.replace(/\D/g, "");
 
+                                        // если всё стерли — не навязываем +48
+                                        if (digits.length === 0) {
+                                            target.value = "";
+                                            return;
+                                        }
+
+                                        // убираем возможное "48" в начале (если пользователь вставил номер с кодом)
+                                        if (digits.startsWith("48")) {
+                                            digits = digits.slice(2);
+                                        }
+
                                         digits = digits.slice(0, 9);
 
                                         let formatted = "+48";
@@ -125,15 +136,33 @@ const OrderConsultationForm = () => {
 
                                                     let value = target.value.replace(/[^\d:]/g, "");
 
-                                                    // автоматически вставляем ":" после 2 цифр
                                                     if (value.length > 2 && !value.includes(":")) {
                                                         value = value.slice(0, 2) + ":" + value.slice(2);
                                                     }
 
-                                                    // ограничиваем длину до 5 символов (HH:MM)
                                                     value = value.slice(0, 5);
 
-                                                    target.value = value;
+                                                    let [hours, minutes] = value.split(":");
+
+                                                    if (hours) {
+                                                        let h = parseInt(hours, 10);
+
+                                                        if (!isNaN(h)) {
+                                                            if (h > 23) h = 23;
+                                                            hours = h.toString();
+                                                        }
+                                                    }
+
+                                                    if (minutes) {
+                                                        let m = parseInt(minutes, 10);
+
+                                                        if (!isNaN(m)) {
+                                                            if (m > 59) m = 59;
+                                                            minutes = m.toString();
+                                                        }
+                                                    }
+
+                                                    target.value = minutes !== undefined ? `${hours}:${minutes}` : hours;
                                                 }}
                                                 className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 outline-none transition-all dark:border-gray-600 dark:bg-[rgba(28,28,30,1)] dark:text-gray-100"/>
 
@@ -142,17 +171,35 @@ const OrderConsultationForm = () => {
                                                 onInput={(e) => {
                                                     const target = e.target as HTMLInputElement;
 
-                                                    // оставляем только цифры и двоеточие
                                                     let value = target.value.replace(/[^\d:]/g, "");
 
-                                                    // автоматически вставляем ":" после 2 цифр
                                                     if (value.length > 2 && !value.includes(":")) {
                                                         value = value.slice(0, 2) + ":" + value.slice(2);
                                                     }
 
                                                     value = value.slice(0, 5);
 
-                                                    target.value = value;
+                                                    let [hours, minutes] = value.split(":");
+
+                                                    if (hours) {
+                                                        let h = parseInt(hours, 10);
+
+                                                        if (!isNaN(h)) {
+                                                            if (h > 23) h = 23;
+                                                            hours = h.toString();
+                                                        }
+                                                    }
+
+                                                    if (minutes) {
+                                                        let m = parseInt(minutes, 10);
+
+                                                        if (!isNaN(m)) {
+                                                            if (m > 59) m = 59;
+                                                            minutes = m.toString();
+                                                        }
+                                                    }
+
+                                                    target.value = minutes !== undefined ? `${hours}:${minutes}` : hours;
                                                 }}
                                                 className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 outline-none transition-all dark:border-gray-600 dark:bg-[rgba(28,28,30,1)] dark:text-gray-100"/>
 
