@@ -6,8 +6,8 @@ import {ImagePlus, Loader2, Send, X} from "lucide-react";
 import {useFormStatus} from "react-dom";
 import {CommentBodyProps} from "@/shared/types/comment-body.type";
 import {UploadImageAction} from "@/lib/imagebb/upload.imagebb";
-import {AddCommentAction} from "@/app/comments/action";
 import AnimateSsr from "@/shared/components/custom/ssr/animate.ssr";
+import {AddCommentAction} from "@/shared/util/action";
 
 export const CommentForm = memo(function CommentForm() {
     const [comment, setNewComment] = useState<string>("");
