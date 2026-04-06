@@ -92,8 +92,24 @@ const OrderConsultationForm = () => {
                                     required
                                     onInput={(e) => {
                                         const target = e.target as HTMLInputElement;
-                                        target.value = target.value.replace(/[^0-9+\s()-]/g, "");
 
+                                        let digits = target.value.replace(/\D/g, "");
+
+                                        digits = digits.slice(0, 9);
+
+                                        let formatted = "+48";
+
+                                        if (digits.length > 0) {
+                                            formatted += " " + digits.slice(0, 3);
+                                        }
+                                        if (digits.length > 3) {
+                                            formatted += " " + digits.slice(3, 6);
+                                        }
+                                        if (digits.length > 6) {
+                                            formatted += " " + digits.slice(6, 9);
+                                        }
+
+                                        target.value = formatted;
                                     }}
                                     className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 outline-none transition-all dark:border-gray-600 dark:bg-[rgba(28,28,30,1)] dark:text-gray-100"
                                 />
@@ -104,10 +120,40 @@ const OrderConsultationForm = () => {
                                 <div className={"grid grid-cols-2 gap-5 p-5"}>
                                     <BasicInput type="text" placeholder="Od godziny"
                                                 name={"od"}
+                                                onInput={(e) => {
+                                                    const target = e.target as HTMLInputElement;
+
+                                                    let value = target.value.replace(/[^\d:]/g, "");
+
+                                                    // автоматически вставляем ":" после 2 цифр
+                                                    if (value.length > 2 && !value.includes(":")) {
+                                                        value = value.slice(0, 2) + ":" + value.slice(2);
+                                                    }
+
+                                                    // ограничиваем длину до 5 символов (HH:MM)
+                                                    value = value.slice(0, 5);
+
+                                                    target.value = value;
+                                                }}
                                                 className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 outline-none transition-all dark:border-gray-600 dark:bg-[rgba(28,28,30,1)] dark:text-gray-100"/>
 
                                     <BasicInput type="text" placeholder="Do godziny"
                                                 name={"do"}
+                                                onInput={(e) => {
+                                                    const target = e.target as HTMLInputElement;
+
+                                                    // оставляем только цифры и двоеточие
+                                                    let value = target.value.replace(/[^\d:]/g, "");
+
+                                                    // автоматически вставляем ":" после 2 цифр
+                                                    if (value.length > 2 && !value.includes(":")) {
+                                                        value = value.slice(0, 2) + ":" + value.slice(2);
+                                                    }
+
+                                                    value = value.slice(0, 5);
+
+                                                    target.value = value;
+                                                }}
                                                 className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 outline-none transition-all dark:border-gray-600 dark:bg-[rgba(28,28,30,1)] dark:text-gray-100"/>
 
                                 </div>
