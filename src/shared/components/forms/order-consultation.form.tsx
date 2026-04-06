@@ -104,10 +104,20 @@ const OrderConsultationForm = () => {
                                 <div className={"grid grid-cols-2 gap-5 p-5"}>
                                     <BasicInput type="text" placeholder="Od godziny"
                                                 name={"od"}
+                                                onInput={(e) => {
+                                                    const target = e.target as HTMLInputElement;
+                                                    target.value = target.value.replace(/[^0-9+\s()-]/g, "");
+
+                                                }}
                                                 className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 outline-none transition-all dark:border-gray-600 dark:bg-[rgba(28,28,30,1)] dark:text-gray-100"/>
 
                                     <BasicInput type="text" placeholder="Do godziny"
                                                 name={"do"}
+                                                onInput={(e) => {
+                                                    const target = e.target as HTMLInputElement;
+                                                    target.value = target.value.replace(/[^0-9+\s()-]/g, "");
+
+                                                }}
                                                 className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 outline-none transition-all dark:border-gray-600 dark:bg-[rgba(28,28,30,1)] dark:text-gray-100"/>
 
                                 </div>
