@@ -4,10 +4,12 @@ import {LoginFormValues} from "@/shared/components/forms/auth/login.form";
 import {getFilteredUsers} from "@/lib/firebase/queries/get-user.query";
 import {verify} from "argon2";
 import {randomUUID} from "node:crypto";
-import {addDataWithCustomId} from "@/lib/firebase/firebase";
+import {addDataWithCustomId, updateDocumentField} from "@/lib/firebase/firebase";
 import {CONSTANTS} from "@/shared/consts/consts.consts";
 import {cookies} from "next/headers";
 import {ms} from "@/shared/util/ms.util";
+import {sendMail} from "@/lib/mailer/mailer";
+import {StrangeActivityTemplate} from "@/lib/mailer/templates/strange-activity.template";
 
 export async function LoginAction(data: LoginFormValues) {
     if (!data.login || !data.password) {
@@ -20,10 +22,18 @@ export async function LoginAction(data: LoginFormValues) {
         return { success: false, message: "Not found" };
     }
 
-    console.log(user);
+    if(user.bad_attempts > 6){
+        return { success: false, message: "Strange activity, account is blocked cause provided wrong data to many times, to unlock check a mail" };
+    }
 
     const isPasswordMatch = await verify(user.password,data.password);
     if (!isPasswordMatch) {
+        await updateDocumentField("users",user.id, "bad_attempts", user.bad_attempts + 1)
+        if(user.bad_attempts + 1 == 6){
+            const token = randomUUID()
+            await updateDocumentField("users",user.id, "token", token )
+            await sendMail(user.email,"Strange Activity", StrangeActivityTemplate(user))
+        }
         return { success: false, message: "Invalid credentials, password incorrect" };
     }
 

@@ -3,5 +3,7 @@ export type UserRecord = {
     name: string;
     email: string;
     password: string;
+    bad_attempts: number;
+    token: string;
     admin?: boolean;
 };
