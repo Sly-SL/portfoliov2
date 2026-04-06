@@ -6,6 +6,7 @@ import {Toaster} from "@/shared/components/libs/basic/sonner/root.sonner";
 import Cookie from "@/shared/components/libs/basic/cookie.component"
 import Footer from "@/shared/components/footer";
 import {Montserrat} from "next/font/google";
+import {Analytics} from "@vercel/analytics/next"
 
 export const revalidate = 86400
 
@@ -90,6 +91,7 @@ export default function RootLayout({
         <Cookie/>
         <Toaster/>
         <Footer/>
+        <Analytics mode={"production"}/>
       </body>
     </html>
   );
