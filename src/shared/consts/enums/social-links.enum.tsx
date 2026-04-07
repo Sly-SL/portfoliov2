@@ -37,9 +37,9 @@ export const SocialLinksEnum:SocialLinks[] = [
     {
         name: "YouTube",
         displayName: "YouTube",
-        subText: "@beadclash4628",
+        subText: "@_slysl_",
         icon: Youtube,
-        url: "https://youtube.com/@beadclash4628",
+        url: "https://www.youtube.com/@slysl-coder",
         color: "#FF0000",
         gradient: "from-[#FF0000] to-[#CC0000]",
         isPrimary: false
@@ -47,9 +47,9 @@ export const SocialLinksEnum:SocialLinks[] = [
     {
         name: "GitHub",
         displayName: "Github",
-        subText: "@BeaDClaSh",
+        subText: "@Sly-SL",
         icon: Github,
-        url: "https://github.com/BeaDClaSh",
+        url: "https://github.com/Sly-SL",
         color: "#ffffff",
         gradient: "from-[#333] to-[#24292e]",
         isPrimary: false
