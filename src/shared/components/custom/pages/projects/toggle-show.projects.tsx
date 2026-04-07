@@ -31,22 +31,22 @@ export const ToggleButtonProjects: FC<ToggleButtonProps> = ({ type }) => {
 
         if (isHiddenNow) {
             elements.desktopShowLess.classList.add("hidden");
-            elements.desktopShowLess.classList.remove("grid");
-            elements.mobileShowLess.classList.add("hidden");
+            elements.desktopShowLess.classList.remove("md:grid");
+            elements.mobileShowLess.classList.add("md:hidden");
             elements.mobileShowLess.classList.remove("grid");
 
             elements.allProjects.classList.remove("hidden");
             elements.allProjects.classList.add("grid");
         } else {
-            elements.allProjects.classList.add("hidden");
             elements.allProjects.classList.remove("grid");
+            elements.allProjects.classList.add("hidden");
 
-            if(window.screen.width < 768) {
-                elements.mobileShowLess.classList.remove("hidden");
+            if(window.innerWidth < 768) {
+                elements.mobileShowLess.classList.remove("md:hidden");
                 elements.mobileShowLess.classList.add("grid");
             } else {
                 elements.desktopShowLess.classList.remove("hidden")
-                elements.desktopShowLess.classList.add("grid")
+                elements.desktopShowLess.classList.add("md:grid")
             }
 
         }

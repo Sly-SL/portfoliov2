@@ -111,7 +111,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     }
 
     const title = project.name;
-    const description = project.description ?? "Amazing Product on Antique Shop";
+    const description = project.description ?? "Amazing Product";
     const imageUrl = project.image ?? "/default-og-image.png";
     const url = `${CONSTANTS.FRONTEND_URL}/projects/${id}`;
 

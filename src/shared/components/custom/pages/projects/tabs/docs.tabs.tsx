@@ -53,7 +53,7 @@ const DocsTabs = async () => {
             {/* Show full grid */}
             <div
                 id="documents-show-more"
-                className="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5"
+                className="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
             >
                 {documents.map((doc, index) => (
                     <AnimateSsr
