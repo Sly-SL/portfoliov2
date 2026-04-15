@@ -15,9 +15,9 @@ export const shortcuts = {
 }as const;
 
 export const shortcutsSlysl = {
-    "yt":"/slyslYt",
-    "github":"/slyslGithub",
-    "tiktok":"/tiktok",
-    "instagram":"/instagram",
+    "yt":"https://www.youtube.com/@slysl-coder",
+    "github":"https://github.com/Sly-SL",
+    "tiktok":"https://www.tiktok.com/@_slysl_",
+    "instagram":"https://www.instagram.com/_slysl_/",
     "cv":""
 } as const;
