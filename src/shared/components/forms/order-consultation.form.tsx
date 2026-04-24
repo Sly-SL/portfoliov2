@@ -205,7 +205,7 @@ const OrderConsultationForm = () => {
 
                                 </div>
 
-                                <input type="hidden" name="_next" value={CONSTANTS.FRONTEND_DOMEN+"/formsubmited"}/>
+                                <input type="hidden" name="_next" value={CONSTANTS.FRONTEND_URL+"/formsubmited"}/>
                                 <input type="hidden" name="_captcha" value="false"/>
 
                                 <div className="flex justify-end gap-3 mt-2">
